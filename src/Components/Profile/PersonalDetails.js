@@ -48,7 +48,7 @@ function PersonalDetails(props) {
     };
 
     axios
-      .put("http://localhost:3000/UpdatePersonalDetails", updatedData, {
+      .put("https://developershubbackend.herokuapp.com/UpdatePersonalDetails", updatedData, {
         headers: {
           "x-token": localStorage.getItem("token"),
         },

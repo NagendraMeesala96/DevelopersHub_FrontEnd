@@ -46,7 +46,7 @@ function Dashboard() {
 
   const loadAllPosts = () => {
     axios({
-      url: `http://localhost:3000/allPosts`,
+      url: `https://developershubbackend.herokuapp.com/allPosts`,
       method: "GET",
       headers: {
         "x-token": localStorage.getItem("token"),
@@ -54,15 +54,13 @@ function Dashboard() {
     })
       .then((res) => {
         setAllProjects(res.data);
-        //const token = jwt(localStorage.getItem("token"));
-        //localStorage.setItem("userId", token.users.id);
       })
       .catch((err) => {
         console.log(err);
       });
   };
 
-  const BidsHandler = (postId, title, description, skills, price) => {
+  const BidsHandler = (postId) => {
     navigate(`/ProjectDetails/${postId}`);
   };
   return (
