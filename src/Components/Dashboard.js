@@ -71,7 +71,7 @@ function Dashboard() {
           <Col sm={3} className="mt-3">
             <Paper
               elevation={4}
-              style={{ borderRadius: 12, height: "100%", width: "100%" }}
+              style={{ borderRadius: 12, height: "100%", width: "95%" }}
               className="card card-hover"
               sx={{ ...commonStyles, borderColor: "secondary.main" }}
             >
@@ -153,7 +153,7 @@ function Dashboard() {
                 return (
                   <Paper
                     elevation={4}
-                    style={{ borderRadius: 12, height: 390, width: 505 }}
+                    style={{ borderRadius: 12, height: 420, width: 505 }}
                     className="card card-hover"
                     sx={{ ...commonStyles, borderColor: "secondary.main" }}
                   >
@@ -163,7 +163,7 @@ function Dashboard() {
                       </Typography>
                       <Grid container spacing={2} className="mt-1">
                         <Grid item xs={4}>
-                          <Typography>
+                          <Typography className="d-flex justify-content-center align-items-center">
                             <PersonIcon /> HR/Admin
                           </Typography>
                         </Grid>
