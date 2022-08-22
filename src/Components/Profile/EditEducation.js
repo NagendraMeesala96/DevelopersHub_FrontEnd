@@ -50,7 +50,7 @@ function EditEducation(props) {
     };
 
     axios
-      .put("http://localhost:3000/UpdateEducation", updatedData, {
+      .put("https://developershubbackend.herokuapp.com/UpdateEducation", updatedData, {
         headers: {
           "x-token": localStorage.getItem("token"),
         },

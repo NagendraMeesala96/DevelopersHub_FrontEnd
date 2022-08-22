@@ -32,7 +32,7 @@ function OthersProfile() {
   const loadProfile = () => {
 
     axios
-      .get(`http://localhost:3000/UserProfile/${id}`, {
+      .get(`https://developershubbackend.herokuapp.com/UserProfile/${id}`, {
         headers: {
           "x-token": localStorage.getItem("token"),
         },
@@ -40,7 +40,7 @@ function OthersProfile() {
       .then((res) => {
         setUserData([...userData,res.data]);
         axios
-          .get(`http://localhost:3000/UserProfile/Ratings/${id}`, {
+          .get(`https://developershubbackend.herokuapp.com/UserProfile/Ratings/${id}`, {
             headers: {
               "x-token": localStorage.getItem("token"),
             },

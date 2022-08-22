@@ -100,7 +100,7 @@ function Profile() {
         ProfilePic: imgUrl,
       };
       axios
-        .put("http://localhost:3000/UpdateImg", data, {
+        .put("https://developershubbackend.herokuapp.com/UpdateImg", data, {
           headers: {
             "x-token": localStorage.getItem("token"),
           },
@@ -125,7 +125,7 @@ function Profile() {
     };
 
     axios
-      .post("http://localhost:3000/myProfile", data1, {
+      .post("https://developershubbackend.herokuapp.com/myProfile", data1, {
         headers: {
           "x-token": localStorage.getItem("token"),
         },
@@ -157,7 +157,7 @@ function Profile() {
           Percentage3: res.data.Education.School.Percentage3,
         });
         axios
-          .get("http://localhost:3000/myReview", {
+          .get("https://developershubbackend.herokuapp.com/myReview", {
             headers: {
               "x-token": localStorage.getItem("token"),
             },
@@ -189,7 +189,7 @@ function Profile() {
     };
 
     axios
-      .put("http://localhost:3000/UpdateSocialMedia", updatedData, {
+      .put("https://developershubbackend.herokuapp.com/UpdateSocialMedia", updatedData, {
         headers: {
           "x-token": localStorage.getItem("token"),
         },

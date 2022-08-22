@@ -73,7 +73,7 @@ function ProjectDetails() {
   //Load All the proposal of Post
   const loadAllBids = () => {
     axios({
-      url: `http://localhost:3000/PostBid/${id}`,
+      url: `https://developershubbackend.herokuapp.com/PostBid/${id}`,
       method: "GET",
       headers: {
         "x-token": localStorage.getItem("token"),
@@ -91,7 +91,7 @@ function ProjectDetails() {
   const checkBid = () => {
     console.log();
     axios({
-      url: `http://localhost:3000/checkBid/${id}`,
+      url: `https://developershubbackend.herokuapp.com/checkBid/${id}`,
       method: "POST",
       headers: {
         "x-token": localStorage.getItem("token"),
@@ -109,7 +109,7 @@ function ProjectDetails() {
   //Load All the Posts
   const loadPostDetails = () => {
     axios({
-      url: `http://localhost:3000/GetPost/${id}`,
+      url: `https://developershubbackend.herokuapp.com/GetPost/${id}`,
       method: "GET",
       headers: {
         "x-token": localStorage.getItem("token"),
@@ -133,14 +133,14 @@ function ProjectDetails() {
       alert("Please Fill All the Fields")
     }else{
     axios
-      .post("http://localhost:3000/PlaceBid", bidData, {
+      .post("https://developershubbackend.herokuapp.com/PlaceBid", bidData, {
         headers: {
           "x-token": localStorage.getItem("token"),
         },
       })
       .then((res) => {
         axios
-          .put(`http://localhost:3000/UpdateBid/${id}`, {
+          .put(`https://developershubbackend.herokuapp.com/UpdateBid/${id}`, {
             headers: {
               "x-token": localStorage.getItem("token"),
             },
