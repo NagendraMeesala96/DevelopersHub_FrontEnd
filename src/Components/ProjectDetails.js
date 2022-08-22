@@ -160,7 +160,7 @@ function ProjectDetails() {
   return (
     <Fragment>
       <NavBar />
-      <div className="container">
+      <div className="container-fluid">
         <Box sx={{ width: "100%", typography: "body1" }}>
           <TabContext value={value}>
             <Box
@@ -191,12 +191,12 @@ function ProjectDetails() {
                         //sx={{ ...commonStyles, borderColor: "secondary.main" }}
                       >
                         <Row>
-                          <Col xs={10} md={10}>
+                          <Col xs={8} md={9}>
                             <Typography variant="h5">
                               {data.PostTitle}
                             </Typography>
                           </Col>
-                          <Col xs={1} md={2} className="fw-bold mt-2">
+                          <Col xs={4} md={3} className="fw-bold mt-2">
                             ${data.BidPrice} USD
                           </Col>
                         </Row>
